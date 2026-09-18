@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 235, 205, 0.633);
+}
+
+.title {
+  text-align: center;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: darkblue;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  width: 400px;
+}
+
+.chat {
+  border: 1px solid darkgreen;
+  margin: 5px;
+  text-align: center;
+  background-color: rgba(95, 158, 160, 0.63);
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.from {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.to {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-align: right;
+}
+
+.msg {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+form button {
+  background-color: darkslateblue;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: rgba(42, 30, 124, 0.734);
+}
+
+.date,
+.time {
+  text-align: left;
+}
+
+.btns{
+    display: flex;
+    justify-content: end;
+}
+

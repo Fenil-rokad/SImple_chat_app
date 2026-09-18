@@ -1,0 +1,37 @@
+body {
+  background-color: rgba(255, 235, 205, 0.796);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+form {
+  border: 5px dashed rgb(22, 9, 9);
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 87, 128, 0.692);
+  color: aliceblue;
+  border-radius: 20px;
+}
+
+.chat {
+  margin: 10px;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+}
+
+form button {
+  background-color: rgb(198, 196, 212);
+  border: none;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+}
