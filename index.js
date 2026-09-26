@@ -87,6 +87,10 @@ async function Main() {
       res.redirect("/chats");
     });
 
+    app.use((req, res, next) => {
+      res.render("pageNotFound");
+    })
+
   } catch (err) {
     console.error(`There is an error ${err}`);
   }
