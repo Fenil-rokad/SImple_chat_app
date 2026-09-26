@@ -63,6 +63,9 @@ async function Main() {
     app.get("/chats/:id/edit", async (req, res) => {
       let id = req.params.id;
       let chat = await Chat.findById(id);
+      if (!chat) {
+        return next(new AppError("Chat Not Found", 404));
+      }
       res.render("edit", { chat });
       console.log(chat);
     });
