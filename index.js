@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import { Chat } from "./models/chat.js";
 import methodOverride from "method-override";
 import dotenv from "dotenv";
+import { AppError } from "./AppError.js";
 
 dotenv.config();
 
@@ -86,16 +87,22 @@ async function Main() {
       console.log(deletedChat);
       res.redirect("/chats");
     });
-
-    app.use((req, res, next) => {
-      res.render("pageNotFound");
-    })
-
   } catch (err) {
     console.error(`There is an error ${err}`);
   }
-}
 
+  //Page Not found Middleware..
+  app.use((req, res, next) => {
+    res.render("pageNotFound");
+  });
+
+  //Error handling middleware
+  app.use((err, req, res, next) => {
+    const code = err.statusCode || 500;
+    const message = err.message || "Internal Server Error...";
+    res.status(code).render("error", { code, message });
+  });
+}
 
 Main();
 
